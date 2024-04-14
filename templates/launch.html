@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Launch{% endblock %}
+
+{% block content %}
+    <h1 class="large-text">Francryption</h1>
+    <form method="POST" action="{{ url_for('launch') }}">
+        <input type="submit" name="login" value="Login">
+        <input type="submit" name="register" value="Create Account">
+    </form>
+{% endblock %}

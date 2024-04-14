@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "set-value": "^4.1.0",
+    "update": "^0.4.2"
+  }
+}

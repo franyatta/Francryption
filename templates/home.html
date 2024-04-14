@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome, {{ username }}!</h1>
+    <p>Your encrypted password is: {{ encrypted_password }}</p>
+    <form action="{{ url_for('logout') }}">
+        <input type="submit" value="Logout">
+    </form>
+{% endblock %}

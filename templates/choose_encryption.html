@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Choose Encryption{% endblock %}
+
+{% block content %}
+<h2>Choose Encryption Method</h2>
+<form method="POST">
+    <select name="encryption">
+        <option value="Caesar-Cipher">Caesar Cipher</option>
+        <option value="LSFR">LSFR</option>
+        <option value="ECB">ECB</option>
+    </select>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
