@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from Crypto.Random import get_random_bytes
+import string
 
 app = Flask(__name__)
 
@@ -75,10 +76,6 @@ def lsfr_encrypt(password):
             encrypted_password += char
 
     return encrypted_password
-
-import string
-from Crypto.Util.Padding import pad
-from Crypto.Random import get_random_bytes
 
 def ecb_encrypt(password):
     # Define the block size (in bytes) for AES encryption
