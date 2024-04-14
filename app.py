@@ -1,12 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import base64
 import re
+import os
 from flask_sqlalchemy import SQLAlchemy
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from Crypto.Random import get_random_bytes
 
 app = Flask(__name__)
+
+port = int(os.environ.get('PORT', 5000))
 app.secret_key = 'your_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
@@ -213,4 +216,4 @@ def home():
         return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
